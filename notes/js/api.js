@@ -19,7 +19,7 @@ export class NoteApi {
             mode: "cors",
             credentials: "omit",
             headers: {
-                Authorization: `Bearer ${this.apiKey}`,
+                "X-Authorization": `Bearer ${this.apiKey}`,
                 Accept: jsonType,
                 "Content-Type": jsonType,
             },
