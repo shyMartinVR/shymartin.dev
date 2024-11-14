@@ -49,6 +49,14 @@ nav {
   background-color: darkgoldenrod;
 }
 
+#noteForm > input{
+  min-width: calc(95% - 2em);
+}
+
+#noteForm > input[type=submit]{
+  min-width: 2em;
+}
+
 #noteForm {
   margin-bottom: 2em;
 }
@@ -56,4 +64,9 @@ nav {
 #dialogForm {
   display: flex;
   flex-direction: column;
+}
+
+#noteDiv {
+  margin-left: 0.5em;
+  width: fit-content;
 }
