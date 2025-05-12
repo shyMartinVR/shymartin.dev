@@ -1,0 +1,2 @@
+#board{display:flex;box-sizing:border-box;background-color:#00f;width:-webkit-fit-content;width:-moz-fit-content;width:fit-content;border:2px solid #000}.collumn{display:flex;flex-direction:column-reverse}.cell{box-sizing:border-box;border:2px solid #000;border-radius:20px;width:3em;height:3em;background-color:#fff;margin:1px;text-align:center}.y{background-color:#ff0}.r{background-color:red}
+/*# sourceMappingURL=main.8e7653f7.chunk.css.map */
