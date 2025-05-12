@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trivia</title>
+    <script src="question.js"></script>
+    <script src="main.js"></script>
+    
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Bootstrap end -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="newQuestionButton();">
+    <div class="config">
+
+        <button onclick="newQuestionButton();">New Question</button>
+        <button type="button" data-toggle="collapse" data-target="#categories" aria-expanded="false" aria-controls="categories">Categories</button>
+        <button type="button" data-toggle="collapse" data-target="#difficulties" aria-expanded="false" aria-controls="difficulties">Difficulty</button>
+        <button type="button" data-toggle="collapse" data-target="#types" aria-expanded="false" aria-controls="types">Type</button>
+
+        <div id="categories" class="options collapse">
+            <b>General</b><br>
+            <input class="questionCategory" type="checkbox" id="09" > <label for="09">General Knowledge</label><br>
+            <input class="questionCategory" type="checkbox" id="20" > <label for="20">Mythology</label><br>
+            <input class="questionCategory" type="checkbox" id="21" > <label for="21">Sports</label><br>
+            <input class="questionCategory" type="checkbox" id="22" > <label for="22">Geography</label><br>
+            <input class="questionCategory" type="checkbox" id="23" > <label for="23">History</label><br>
+            <input class="questionCategory" type="checkbox" id="24" > <label for="24">Politics</label><br>
+            <input class="questionCategory" type="checkbox" id="25" > <label for="25">Art</label><br>
+            <input class="questionCategory" type="checkbox" id="26" > <label for="26">Celebrities</label><br>
+            <input class="questionCategory" type="checkbox" id="27" > <label for="27">Animals</label><br>
+            <input class="questionCategory" type="checkbox" id="28" > <label for="28">Vehicles</label><br>
+
+            <br><b>Entertainment</b><br>
+            <input class="questionCategory" type="checkbox" id="10" > <label for="10">Books</label><br>
+            <input class="questionCategory" type="checkbox" id="11" > <label for="11">Film</label><br>
+            <input class="questionCategory" type="checkbox" id="12" > <label for="12">Music</label><br>
+            <input class="questionCategory" type="checkbox" id="13" > <label for="13">Musicals &amp; Theatres</label><br>
+            <input class="questionCategory" type="checkbox" id="14" > <label for="14">Television</label><br>
+            <input class="questionCategory" type="checkbox" id="15" > <label for="15">Video Games</label><br>
+            <input class="questionCategory" type="checkbox" id="16" > <label for="16">Board Games</label><br>
+            <input class="questionCategory" type="checkbox" id="29" > <label for="29">Comics</label><br>
+            <input class="questionCategory" type="checkbox" id="31" > <label for="31">Japanese Anime &amp; Manga</label><br>
+            <input class="questionCategory" type="checkbox" id="32" > <label for="32">Cartoon &amp; Animations</label><br>
+
+            <br><b>Science</b><br>
+            <input class="questionCategory" type="checkbox" id="17" > <label for="17">Science &amp; Nature</label><br>
+            <input class="questionCategory" type="checkbox" id="18" > <label for="18">Computers</label><br>
+            <input class="questionCategory" type="checkbox" id="19" > <label for="19">Mathematics</label><br>
+            <input class="questionCategory" type="checkbox" id="30" > <label for="30">Gadgets</label><br>
+        </div>
+
+        <div id="difficulties" class="options collapse">
+            <b>Difficulty</b><br>
+            <input class="questionDifficulty" type="checkbox" id="easy"> <label for="easy">Easy</label>
+            <input class="questionDifficulty" type="checkbox" id="medium"> <label for="medium">Medium</label>
+            <input class="questionDifficulty" type="checkbox" id="hard"> <label for="hard">Hard</label>
+        </div>
+
+        <div id="types" class="options collapse">
+            <b>Type</b><br>
+            <input class="questionType" type="checkbox" id="multiple"> <label for="multiple"></label>Multiple Choice</label>
+            <input class="questionType" type="checkbox" id="boolean"> <label for="boolean"></label>True / False</label>
+        </div>
+    </div>
+
+    <div class="questionStats">
+        <p>Question #<span class="questionCount">1</span> correct: <span class="questionCorrect">0</span> incorrect: <span class="questionIncorrect">0</span></p>
+    </div>
+
+    <div class="questionDiv"></div>
+
+    <footer class="bottom">
+        <p>Powered by <a href="https://opentdb.com/" target="_blank">Open Trivia Database</a></p>
+    </footer>
+
+</body>
+</html>
