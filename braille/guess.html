@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Braille Guessing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body onkeydown="hotkeys(event)" onload="newChar()">
+    <table>
+        <tr>
+            <td><button onclick="toggle(0);"><img class="circle" src="empty.png"></button></td>
+            <td><button onclick="toggle(1);"><img class="circle" src="empty.png"></button></td>
+        </tr>
+        <tr>
+            <td><button onclick="toggle(2);"><img class="circle" src="empty.png"></button></td>
+            <td><button onclick="toggle(3);"><img class="circle" src="empty.png"></button></td>
+        </tr>
+        <tr>
+            <td><button onclick="toggle(4);"><img class="circle" src="empty.png"></button></td>
+            <td><button onclick="toggle(5);"><img class="circle" src="empty.png"></button></td>
+        </tr>
+    </table>
+    <button id="btnSubmit" onclick="guessPattern()">Submit</button>
+    <table border="1">
+        <tr>
+            <th>Correct</th>
+            <th>Wrong</th>
+            <th>Streak</th>
+        </tr>
+        <tr>
+            <td class="scores">0</td>
+            <td class="scores">0</td>
+            <td class="scores">0</td>
+        </tr>
+    </table>
+    <p id="result"></p>
+    <span id="charPreview"></span>
+</body>
+</html>
