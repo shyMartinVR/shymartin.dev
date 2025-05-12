@@ -1,0 +1,92 @@
+
+/* Global CSS */
+
+*{
+	font-family: 'arial';
+	font-size: 25px;
+}
+
+#jsLoaded{
+	font-size:3em;
+	color:red;
+}
+
+#backstein{
+	float: left;
+	padding-left:50px;
+	padding-top:50px;
+}
+
+#shopDiv{
+	float:right;
+	margin-right:20px;
+}
+
+#shopDiv p{
+	text-align:center;
+	margin-top:40px;
+}
+
+#reset:hover{
+	background-color:#800012;
+}
+
+#reset{
+	background-color:green;
+}
+
+#realShop button{
+	background-color:green;
+	text-align:left;
+	width:400px;
+}
+
+/* ID's */
+
+#bild:active{
+	width: 127px;
+	height: 127px;
+	margin-bottom: 1px;
+}
+
+/* FOOTER */
+
+footer {
+	position: fixed;
+	padding: 10px;
+	height: 25px;
+	bottom: 0;
+	left: 45px;
+	right: 0;
+	background-image: url(media/BrickBackground.png);
+}
+
+#footerleft {
+	position: fixed;
+	padding: 10px;
+	width: 25px;
+	bottom: 0;
+	left: 0;
+	top: 0;
+	background-image: url(media/BrickBackground.png);
+}
+
+#footertop {
+	position: fixed;
+	padding: 10px;
+	height: 25px;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-image: url(media/BrickBackground.png);
+}
+
+#footerright {
+	position: fixed;
+	padding: 10px;
+	width: 25px;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	background-image: url(media/BrickBackground.png);
+}

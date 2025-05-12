@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<HTML>
+
+<HEAD>
+	<link rel="stylesheet" href="Style.css">
+	<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" charset="UTF-8">
+	<TITLE>Backstein Clicker</TITLE>
+</HEAD>
+
+<BODY>
+	<div id="backstein">
+		<input id="bild" type="image" src="media/Backstein.png" width="128px" height="128px" onclick="backsteinInc();"
+			onkeydown="enterBan(event);">
+		<p>Backsteine: <span id="Anzahl">0</span></p>
+		<p id="bps">bps: 0</p>
+		<span id="jsLoaded">JS nicht geladen</span>
+	</div>
+	<div id="shopDiv">
+		<p>Shop <button id="reset" onclick="resetCookies(false);">Reset</button></p>
+		<div id="realShop">
+			<table>
+				<tr>
+					<td><button id="shop" type="button" onclick="kaufen(0);">
+							<table>
+								<tr>
+									<td><img src="media/Bauarbeiter.png"></td>
+									<td>Bauarbeiter (Klick-Boost)<br>Anzahl: <span class="Anzahl"></span> Preis: <span
+											class="Preis"></span></td>
+								</tr>
+							</table>
+						</button></td>
+				</tr>
+				<tr>
+					<td><button id="shop" type="button" onclick="kaufen(1);">
+							<table>
+								<tr>
+									<td><img src="media/Ofen.png"></td>
+									<td>Hochofen<br>Anzahl: <span class="Anzahl"></span> Preis: <span
+											class="Preis"></span></td>
+								</tr>
+							</table>
+						</button></td>
+				</tr>
+				<tr>
+					<td><button id="shop" type="button" onclick="kaufen(2);">
+							<table>
+								<tr>
+									<td><img src="media/crypto-miner.png"></td>
+									<td>Crypto-Miner<br>Anzahl: <span class="Anzahl"></span> Preis: <span
+											class="Preis"></span></td>
+								</tr>
+							</table>
+						</button></td>
+				</tr>
+				<tr>
+					<td><button id="shop" type="button" onclick="kaufen(3);">
+							<table>
+								<tr>
+									<td><img src="media/boerse.png"></td>
+									<td>Backstein-Börse<br>Anzahl: <span class="Anzahl"></span> Preis: <span
+											class="Preis"></span></td>
+								</tr>
+							</table>
+						</button></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div id="footerleft"></div>
+	<div id="footertop"></div>
+	<div id="footerright"></div>
+	<footer id="float">
+		<a href="/"><img src="/back.png"></a>
+		<a href="en.html"><img src="/uk.png"></a>
+		Project #1: 2017
+	</footer>
+	<script>var lang = "de"</script>
+	<script src="BacksteinClicker.js"></script>
+</body>
+
+</HTML>
