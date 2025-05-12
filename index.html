@@ -3,16 +3,79 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>meow</title>
+    <title>shyMartin's website</title>
     <style>
-      body {
-        margin: 0;
-        height: 100vh;
-        font-family: sans-serif;
-        background-color: black;
-        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='1ic' width='5.5ch'><text x='0' y='1ic' fill='white'>meow</text></svg>");
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        list-style-type: none;
+        padding: 0;
+      }
+      li {
+        margin: 10px 0;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      img {
+        width: 8em;
+        height: 8em;
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 10em;
+        height: 10em;
+        border: 1px solid black;
+        border-radius: 10px;
       }
     </style>
   </head>
-  <body></body>
+  <body>
+    <script>
+      const pages = [
+        '4gewinnt',
+        'allColors',
+        'backsteinClicker',
+        'balls',
+        'bitwise',
+        'braille',
+        'bubblewrap',
+        'gameOfLife',
+        'maze',
+        'mineSweeper',
+        'moneyCounter',
+        'notes',
+        'timer',
+        'transition',
+        'trivia'
+      ];
+      const ul = document.createElement('ul');
+      pages.forEach(page => {
+        const li = document.createElement('li');
+
+        const a = document.createElement('a');
+        a.href = page;
+
+        const container = document.createElement('div');
+        a.append(container);
+        li.append(a);
+
+        const img = document.createElement('img');
+        img.src = `./${page}/thumbnail.png`;
+        img.alt = page;
+        container.append(img);
+
+        const span = document.createElement('span');
+        span.textContent = page;
+        container.append(span);
+        
+        ul.append(li);
+      });
+      document.body.append(ul);
+    </script>
+  </body>
 </html>
