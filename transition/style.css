@@ -1,0 +1,61 @@
+:root {
+	--duration: 1s;
+}
+
+body {
+	margin: 0;
+	display: grid;
+	background-color: #142020;
+	justify-items: center;
+	grid-template-rows: auto 1fr;
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+}
+
+input {
+	width: 99%;
+}
+
+main {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.ball {
+	--size: 32px;
+	position: absolute;
+	height: var(--size);
+	width: var(--size);
+	border-radius: calc(var(--size) / 2);
+	display: flex;
+	text-align: center;
+	flex-direction: column;
+	justify-content: center;
+	user-select: none;
+	translate: -50% -50%;
+}
+
+#controlling {
+	background-color: cyan;
+	transition-property: top, left;
+	transition-duration: var(--duration);
+	transition-timing-function: ease-in-out;
+	left: 50%;
+	top: 50%;
+}
+
+.goal {
+	background-color: lime;
+	transition-property: opacity;
+	transition-timing-function: cubic-bezier(0.74, 0.13, 0.66, 0.73);
+	transition-duration: var(--duration);
+	opacity: 1;
+}
+
+.target {
+	opacity: 0;
+	outline: 4px white solid;
+}
