@@ -1,0 +1,63 @@
+body {
+	margin: 0;
+}
+
+header {
+	z-index: 1;
+	margin-top: 1em;
+	position: fixed;
+	background-color: crimson;
+	outline-style: solid;
+	padding: 0 1.5em;
+	transition: translate 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	border-radius: 0 2em 2em 0;
+	translate: calc(1.5em - 100%);
+}
+
+header:hover {
+	translate: initial;
+}
+
+main {
+	height: 100vmin;
+	width: 100vmin;
+	background-color: cyan;
+	cursor: pointer;
+}
+
+main,
+main grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	transition: all 1s;
+}
+
+main.ball,
+main.ball grid {
+	border-radius: 50%;
+}
+
+main.scaled grid {
+	/* pi / 4 */
+	scale: 0.7853981633974483;
+
+	/* 0.5 - (Math.SQRT2 - 1) */
+	--pShift: 8.346268416%;
+	--nShift: -8.346268416%;
+}
+
+main.scaled grid:nth-child(1) {
+	translate: var(--pShift) var(--pShift);
+}
+
+main.scaled grid:nth-child(2) {
+	translate: var(--nShift) var(--pShift);
+}
+
+main.scaled grid:nth-child(3) {
+	translate: var(--pShift) var(--nShift);
+}
+
+main.scaled grid:nth-child(4) {
+	translate: var(--nShift) var(--nShift);
+}
