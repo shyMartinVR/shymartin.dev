@@ -1,0 +1,76 @@
+body {
+	background-color: #4c4848;
+	color: white;
+}
+
+.settingsNumber {
+	width: 45px;
+}
+
+main table {
+	border: black;
+	display: contents;
+}
+
+main td {
+	padding: 0px;
+	width: 32px;
+	height: 32px;
+	text-align: center;
+	border: black 1px solid;
+	border-collapse: collapse;
+	align-content: center;
+	background-size: contain;
+}
+
+.mine {
+	background-image: url("./img/mine.png");
+}
+
+.flag {
+	background-image: url("./img/flag.png");
+}
+
+.wrongFlag {
+	background-image: url("./img/wrongFlag.png");
+}
+
+.closed {
+	background-color: #7f7f7f;
+}
+
+.mineLevel-0 {
+	background-color: #585858;
+}
+
+.mineLevel-1 {
+	background-color: #008600;
+}
+
+.mineLevel-2 {
+	background-color: #69b50e;
+}
+
+.mineLevel-3 {
+	background-color: #849000;
+}
+
+.mineLevel-4 {
+	background-color: #805600;
+}
+
+.mineLevel-5 {
+	background-color: #803800;
+}
+
+.mineLevel-6 {
+	background-color: #802700;
+}
+
+.mineLevel-7 {
+	background-color: #802d00;
+}
+
+.mineLevel-8 {
+	background-color: #c30000;
+}
