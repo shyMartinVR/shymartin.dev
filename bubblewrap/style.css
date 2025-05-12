@@ -1,0 +1,25 @@
+body{
+    display: flex;
+    background-color: #1e1e1e;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+div{
+    background-color: skyblue;
+    border-radius: 50%;
+    width: 2em;
+    height: 2em;
+    margin: 1px;
+    user-select: none;
+}
+
+.popped{
+    background-color: transparent;
+    transition-property: scale, background-color;
+    transition-duration: 30ms, 0s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s, 30ms;
+    scale: 2;
+    z-index: -1;
+}
