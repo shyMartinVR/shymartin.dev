@@ -1,1 +1,89 @@
-Geheimer text
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rätsel</title>
+  <style>
+    body {
+      font-family: 'Segoe UI Symbol', 'Arial Unicode MS', Arial, sans-serif;
+      text-align: center;
+    }
+    /* fade in for hints */
+    p {
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    #dotsContainer {
+      font-size: 1.25em;
+      margin: 1em auto;
+      line-height: 1.2;
+      letter-spacing: 0.3em;
+      height: 1.5em;
+      user-select: none;
+    }
+
+    .dot {
+      opacity: 0.25;
+      animation: blink 1.25s infinite;
+      display: inline-block;
+      transition: opacity 0.25s;
+    }
+  .dot:nth-child(1) { animation-delay: 0s; }
+  .dot:nth-child(2) { animation-delay: 0.25s; }
+  .dot:nth-child(3) { animation-delay: 0.5s; }
+  .dot:nth-child(4) { animation-delay: 0.75s; }
+    @keyframes blink {
+      0%, 100% { opacity: 0.25; }
+      50% { opacity: 1; }
+    }
+  </style>
+</head>
+
+<body>
+  <main></main>
+  <div id="dotsContainer">
+    <span class="dot">&#9679;</span>
+    <span class="dot">&#9679;</span>
+    <span class="dot">&#9679;</span>
+    <span class="dot">&#9679;</span>
+  </div>
+  <script>
+    const hints = [
+      "Ich bin intelligent, aber habe kein Gehirn.",
+      "Ich bin gut im Suchen, aber habe keine Augen.",
+      "Ich bin leicht, du kannst mich überall mitnehmen.",
+      "Ich kann vieles, aber heute spiele ich einfach deine Playlist ab.",
+      "Was bin ich?",
+      "Jemand hat einen Hinweis bei mir versteckt."
+    ];
+    const main = document.querySelector('main');
+    const dots = document.querySelector('#dotsContainer');
+
+    addHint();
+    const hintInterval = setInterval(() => addHint(), 5000);
+
+    function addHint() {
+      if (hints.length === 0) return;
+      const hint = hints.shift();
+      const p = document.createElement('p');
+      p.textContent = hint;
+      main.appendChild(p);
+      
+      if (hints.length === 0) {
+        dots.remove();
+        clearInterval(hintInterval);
+      }
+    }
+  </script>
+</body>
+
+</html>
