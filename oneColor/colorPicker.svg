@@ -1,0 +1,71 @@
+<!-- 99% vibe coded, see vibes.txt -->
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- Color wheel segments (12 segments, 30 degrees each) -->
+  
+  <!-- Red (0°) - Top -->
+  <path d="M 50 20 L 57.99 37.99 A 15 15 0 0 1 62.99 42.01 L 75.98 24.02 A 30 30 0 0 0 50 20 Z" 
+        fill="hsl(0, 100%, 50%)" stroke="black" stroke-width="1"/>
+  
+  <!-- Orange (30°) -->
+  <path d="M 75.98 24.02 L 62.99 42.01 A 15 15 0 0 1 64.95 50 L 79.9 50 A 30 30 0 0 0 75.98 24.02 Z" 
+        fill="hsl(30, 100%, 50%)" stroke="black" stroke-width="1"/>
+  
+  <!-- Yellow (60°) -->
+  <path d="M 79.9 50 L 64.95 50 A 15 15 0 0 1 62.99 57.99 L 75.98 75.98 A 30 30 0 0 0 79.9 50 Z" 
+        fill="hsl(60, 100%, 50%)" stroke="black" stroke-width="1"/>
+  
+  <!-- Yellow-Green (90°) -->
+  <path d="M 75.98 75.98 L 62.99 57.99 A 15 15 0 0 1 57.99 62.01 L 75.98 75.98 A 30 30 0 0 0 75.98 75.98 Z" 
+        fill="hsl(90, 100%, 50%)" stroke="black" stroke-width="1"/>
+  
+  <!-- Green (120°) -->
+  <path d="M 75.98 75.98 L 57.99 62.01 A 15 15 0 0 1 50 64.95 L 50 79.9 A 30 30 0 0 0 75.98 75.98 Z" 
+        fill="hsl(120, 100%, 50%)" stroke="black" stroke-width="1"/>
+  
+  <!-- Cyan-Green (150°) -->
+  <path d="M 50 79.9 L 50 64.95 A 15 15 0 0 1 42.01 62.01 L 24.02 75.98 A 30 30 0 0 0 50 79.9 Z" 
+        fill="hsl(150, 100%, 50%)" stroke="black" stroke-width="1"/>
+  
+  <!-- Cyan (180°) -->
+  <path d="M 24.02 75.98 L 42.01 62.01 A 15 15 0 0 1 37.01 57.99 L 20.1 75.98 A 30 30 0 0 0 24.02 75.98 Z" 
+        fill="hsl(180, 100%, 50%)" stroke="black" stroke-width="1"/>
+  
+  <!-- Light Blue (210°) -->
+  <path d="M 20.1 75.98 L 37.01 57.99 A 15 15 0 0 1 35.05 50 L 20.1 50 A 30 30 0 0 0 20.1 75.98 Z" 
+        fill="hsl(210, 100%, 50%)" stroke="black" stroke-width="1"/>
+  
+  <!-- Blue (240°) -->
+  <path d="M 20.1 50 L 35.05 50 A 15 15 0 0 1 37.01 42.01 L 24.02 24.02 A 30 30 0 0 0 20.1 50 Z" 
+        fill="hsl(240, 100%, 50%)" stroke="black" stroke-width="1"/>
+  
+  <!-- Blue-Purple (270°) -->
+  <path d="M 24.02 24.02 L 37.01 42.01 A 15 15 0 0 1 42.01 37.99 L 24.02 24.02 A 30 30 0 0 0 24.02 24.02 Z" 
+        fill="hsl(270, 100%, 50%)" stroke="black" stroke-width="1"/>
+  
+  <!-- Purple (300°) -->
+  <path d="M 24.02 24.02 L 42.01 37.99 A 15 15 0 0 1 50 35.05 L 50 20.1 A 30 30 0 0 0 24.02 24.02 Z" 
+        fill="hsl(300, 100%, 50%)" stroke="black" stroke-width="1"/>
+  
+  <!-- Magenta (330°) -->
+  <path d="M 50 20.1 L 50 35.05 A 15 15 0 0 1 57.99 37.99 L 75.98 24.02 A 30 30 0 0 0 50 20.1 Z" 
+        fill="hsl(330, 100%, 50%)" stroke="black" stroke-width="1"/>
+  
+  <!-- Center circle (white) -->
+  <circle cx="50" cy="50" r="15" fill="#3498db" stroke="black" stroke-width="1"/>
+  
+  <!-- Pipette/Eyedropper -->
+  <g transform="translate(68, 12) rotate(45 10 10)">
+    <!-- Pipette bulb -->
+    <ellipse cx="10" cy="8" rx="5" ry="6" fill="rgba(200, 200, 200, 0.9)" stroke="black" stroke-width="1.2"/>
+    
+    <!-- Pipette tube -->
+    <rect x="8" y="13" width="4" height="10" fill="rgba(220, 220, 220, 0.9)" stroke="black" stroke-width="1.2"/>
+    
+    <!-- Pipette tip -->
+    <path d="M 8 23 L 10 28 L 12 23 Z" fill="rgba(220, 220, 220, 0.9)" stroke="black" stroke-width="1.2"/>
+    
+    <!-- Liquid in pipette -->
+    <ellipse cx="10" cy="9.5" rx="3" ry="4" fill="hsl(200, 80%, 60%)" stroke="none"/>
+  </g>
+</svg>

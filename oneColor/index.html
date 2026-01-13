@@ -1,0 +1,40 @@
+<!-- 99% vibe coded, see vibes.txt -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>One Color</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" type="module"></script>
+</head>
+
+<body>
+  <div class="controls" id="controls">
+    <h2>Color Picker</h2>
+
+    <div class="input-group">
+      <input type="text" id="colorInput" placeholder="Enter color (e.g., #FF5733, red)" value="#3498db">
+      <div id="colorPicker">
+        <input type="color" name="colorPicker" id="colorPickerInput" value="#3498db" hidden>
+        <img src="colorPicker.svg" alt="color picker" id="colorPickerSvg">
+      </div>
+      <button class="save-btn button" id="saveBtn">Save</button>
+    </div>
+
+    <div style="display: flex; gap: 10px; align-items: center;">
+      <h2 style="flex: 1; margin: 0;">Saved Colors</h2>
+      <button class="edit-btn button" id="editBtn">Edit</button>
+      <button class="reset-btn button" id="resetBtn">Reset</button>
+    </div>
+    <div class="preset-colors" id="savedColors"></div>
+
+    <button class="hide-controls-btn" id="hideBtn">Go Fullscreen</button>
+  </div>
+
+  <button class="show-controls-btn" id="showBtn">Show Controls</button>
+</body>
+
+</html>
