@@ -88,13 +88,13 @@ export default class Game {
 							this.mineCount++;
 						}
 						tile.update(true);
-						status.innerText = `${this.mineCount} mines left`;
+						this.updateStatus();
 					}
 				});
 			}
 		}
 		main.append(table);
-		status.innerText = `${this.mineCount} mines left`;
+		this.updateStatus();
 	}
 
 	open(tile) {
@@ -140,7 +140,7 @@ export default class Game {
 	loss() {
 		for (const tile of [...this.mines, ...this.flags]) {
 			tile.update(this.alive);
-			status.textContent = `${this.mineCount} mines left - You died!`;
+			this.updateStatus(true);
 		}
 	}
 
@@ -152,6 +152,14 @@ export default class Game {
 					this.tiles[y + offY][x + offX].neighbors++;
 				} catch (error) {}
 			}
+		}
+	}
+
+	updateStatus(death = false) {
+		const plural = this.mineCount == 1 ? "" : "s";
+		status.textContent = `${this.mineCount} mine${plural} left`;
+		if (death) {
+			status.textContent += " - You died!";
 		}
 	}
 }
