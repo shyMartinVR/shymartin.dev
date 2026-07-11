@@ -24,7 +24,7 @@ export default class CellArray {
         });
     }
 
-    cicle() {
+    cycle() {
         //reset neighbour count
         this.array.forEach(innerArray => {
             innerArray.forEach(cell => cell.neigbours = 0);

@@ -18,7 +18,7 @@ function main() {
 }
 
 function addListeners() {
-	document.querySelector(".buttonCicle").addEventListener("click", clickButton);
+	document.querySelector(".buttonCycle").addEventListener("click", clickButton);
 	document.querySelector(".intervalButton").addEventListener("click", intervalButtonCallback);
 	document.querySelector(".delay").addEventListener("change", delayCallback);
 	document.querySelector(".cellSize").addEventListener("change", cellsizeCallback);
@@ -31,7 +31,7 @@ function canvasCallback(event) {
 }
 
 function clickButton() {
-	cellArray.cicle();
+	cellArray.cycle();
 }
 
 function intervalButtonCallback(event) {
