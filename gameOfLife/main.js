@@ -1,5 +1,7 @@
 import CellArray from "./modules/cellArray.js";
 
+const wrapCheckbox = document.querySelector(".wrap");
+
 let cellArray;
 let interval;
 let delay = 50;
@@ -31,7 +33,7 @@ function canvasCallback(event) {
 }
 
 function clickButton() {
-	cellArray.cycle();
+	cellArray.cycle(wrapCheckbox.checked);
 }
 
 function intervalButtonCallback(event) {

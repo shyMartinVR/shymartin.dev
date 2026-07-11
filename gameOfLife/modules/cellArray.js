@@ -24,7 +24,7 @@ export default class CellArray {
         });
     }
 
-    cycle() {
+    cycle(wrap) {
         //reset neighbour count
         this.array.forEach(innerArray => {
             innerArray.forEach(cell => cell.neigbours = 0);
@@ -33,7 +33,7 @@ export default class CellArray {
         this.array.forEach(innerArray => {
             innerArray.forEach(cell => {
                 if (cell.alive)
-                    cell.addNeighbour(this.array, this.width, this.height);
+                    cell.addNeighbour(this.array, this.width, this.height, wrap);
             });
         });
         //set alive

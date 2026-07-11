@@ -64,12 +64,30 @@ export default class Cell {
             this.alive = false;
     }
 
-    addNeighbour(_calcArray, _maxWidth, _maxHeight) {
+    addNeighbour(_calcArray, _maxWidth, _maxHeight, wrap) {
         for (let index = this.x - 1; index < this.x + 2; index++) {
-            if (index >= 0 && index < _maxWidth)
-                for (let indey = this.y - 1; indey < this.y + 2; indey++)
-                    if (indey >= 0 && indey < _maxHeight && !(index == this.x && indey == this.y))
-                        _calcArray[index][indey].neigbours++;
+            for (let indey = this.y - 1; indey < this.y + 2; indey++) {
+                if (!(index == this.x && indey == this.y)) {
+                    let [nx, ny] = wrap ? this.normalizeCoords(index, indey, _maxWidth, _maxHeight) : [index, indey];
+                    if (nx >= 0 && nx < _maxWidth && ny >= 0 && ny < _maxHeight) {
+                        _calcArray[nx][ny].neigbours++;
+                    }
+                }
+            }
         }
+    }
+
+    normalizeCoords(x, y, _maxWidth, _maxHeight) {
+        if (x < 0)
+            x = _maxWidth - 1;
+        else if (x >= _maxWidth)
+            x = 0;
+
+        if (y < 0)
+            y = _maxHeight - 1;
+        else if (y >= _maxHeight)
+            y = 0;
+
+        return [x, y];
     }
 }
